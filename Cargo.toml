@@ -1,0 +1,22 @@
+[package]
+name = "playground-metrics"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lexical-core = "0.8"
+regex = "1"
+teloxide = { version = "0.12", default-features = false, features = ["ctrlc_handler", "rustls"] }
+text2num = "2"
+tokio = { version = "1", default-features = false, features = ["rt"] }
+
+[profile.release]
+codegen-units = 1
+debug = false
+incremental = false
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true
