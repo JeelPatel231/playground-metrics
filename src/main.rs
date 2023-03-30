@@ -13,7 +13,7 @@ use models::{Metric, Position, Unit};
 use units::*;
 type UnitMap = HashMap<&'static str, &'static Unit>;
 
-fn get_units<'a>() -> UnitMap {
+fn get_units() -> UnitMap {
     HashMap::from([
         ("kg", &KILOGRAM),
         ("kgs", &KILOGRAM),
